@@ -20,11 +20,13 @@
 
 :root {
     --sidebarWidth: 430px;
-    --blue: #003F59;
+    --blue: #646ECB;
     --grn: #0BC466;
     --pur: #A24EEA;
     --red: #F5212F;
-    --darkpur: #30223B;
+    --darkblue: #303957;
+    --mediumblue:#284579;
+    --grey: #545B65;
 }
 
 /*==========================================================================
@@ -39,56 +41,6 @@ h6,
 p {
     font-weight: normal;
 }
-
-
-@font-face {
-    font-family: 'thin';
-    src: url('../fonts/cera_pro_thin-webfont.woff2') format('woff2'),
-        url('../fonts/cera_pro_thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'light';
-    src: url('../fonts/cera_pro_light-webfont.woff2') format('woff2'),
-        url('../fonts/cera_pro_light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'regular';
-    src: url('../fonts/cera_pro_regular-webfont.woff2') format('woff2'),
-        url('../fonts/cera_pro_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'medium';
-    src: url('../fonts/cera_pro_medium-webfont.woff2') format('woff2'),
-        url('../fonts/cera_pro_medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'bold';
-    src: url('../fonts/cera_pro_bold-webfont.woff2') format('woff2'),
-        url('../fonts/cera_pro_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'black';
-    src: url('../fonts/cera_pro_black-webfont.woff2') format('woff2'),
-        url('../fonts/cera_pro_black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 @font-face {
     font-family: 'icomoon';
@@ -401,13 +353,13 @@ p {
 /* Grid */
 .f-row {
     display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -20px;
+    margin-right: -20px;
     flex-wrap: wrap;
 }
 
 .f-col {
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .grid(@name; @columns; @index: 1) when (@index =< @columns) {
@@ -426,8 +378,8 @@ p {
 
     .@{name}@{count} {
         width: (percentage(@count / 100));
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -435,14 +387,14 @@ p {
 
 .w33 {
     width: 33%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .w16 {
     width: 16.666666%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Margin */
@@ -607,7 +559,7 @@ html {
 }
 
 body {
-    font-family: 'regular';
+    font-family: 'Inter', sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -642,7 +594,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1em;
 }
 
@@ -835,7 +787,7 @@ hr {
 .button {
     border: none;
     outline: none;
-    background: var(--pur);
+    background: var(--blue);
     border: 2px solid transparent;
     color: #ffffff;
     // display: inline-block;
@@ -848,7 +800,8 @@ hr {
     padding: 0 32px;
     border-radius: 8px;
     font-size: 16px;
-    font-family: "bold";
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     .anim();
@@ -901,8 +854,8 @@ hr {
     &:hover {
         /* opacity: 0.7; */
         background: transparent;
-        border: 2px solid var(--pur);
-        color: var(--pur);
+        border: 2px solid var(--blue);
+        color: var(--blue);
 
         .arrow-smlbx {
             svg {
@@ -939,12 +892,12 @@ hr {
         }
 
         &.pur-line {
-            border: 1px solid var(--pur);
-            color: var(--pur);
+            border: 1px solid var(--blue);
+            color: var(--blue);
 
             &:hover {
-                background: var(--pur);
-                border: 1px solid var(--pur);
+                background: var(--blue);
+                border: 1px solid var(--blue);
                 color: #fff;
             }
         }
@@ -1075,7 +1028,8 @@ button:focus {
 }
 
 .form-field {
-    font-family: "medium";
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     border: none;
     border-bottom: 1px solid #DDE3EE;
     height: var(--form-field-height);
@@ -1160,7 +1114,7 @@ button:focus {
     left: 10px;
     top: 25px;
     font-size: 18px;
-    color: var(--pur);
+    color: var(--blue);
     line-height: 0;
     opacity: 0;
 }
@@ -1451,7 +1405,8 @@ label.error {
         border: 1px solid #a24eea;
 
         span {
-            font-family: "bold";
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
             color: #30223b;
         }
 
@@ -1510,7 +1465,8 @@ label.error {
         }
 
         span {
-            font-family: "medium";
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
             font-size: 14px;
             color: #000;
             margin-left: 25px;
@@ -1563,7 +1519,8 @@ label.error {
         .flex(flex-start, center);
 
         span {
-            font-family: "medium";
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
             font-size: 16px;
             color: #8594AF;
         }
@@ -1665,7 +1622,7 @@ input[type="number"]::-webkit-outer-spin-button {
 => Modal
 ==========================================================================*/
 .modal-title {
-    font-family: 'dm_serif_display';
+    font-family: 'Inter', sans-serif;
     font-size: 30px;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -1677,7 +1634,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .modal-subTitle {
-    font-family: 'dm_serif_display';
+    font-family: 'Inter', sans-serif;
     font-size: 22px;
     margin-bottom: 20px;
     line-height: 1.2;
