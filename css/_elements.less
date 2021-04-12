@@ -25,7 +25,7 @@
     --pur: #A24EEA;
     --red: #F5212F;
     --darkblue: #303957;
-    --mediumblue:#284579;
+    --mediumblue: #284579;
     --grey: #545B65;
 }
 
@@ -704,6 +704,7 @@ input::-moz-focus-inner {
 textarea {
     overflow: auto;
     vertical-align: top;
+    padding: 20px;
 }
 
 table {
@@ -803,8 +804,20 @@ hr {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     .anim();
+
+    &.wht-line {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+
+        &:hover {
+            background: white;
+            color: var(--blue);
+            border: 1px solid white;
+        }
+    }
 
     &.white {
         background: #fff;
@@ -974,7 +987,7 @@ button:focus {
 => Form Elements
 ========================================================================== */
 :root {
-    --form-field-height: 50px;
+    --form-field-height: 62px;
 }
 
 .element-section {
@@ -1006,6 +1019,8 @@ button:focus {
 }
 
 .form-grp {
+    overflow: hidden;
+
     .inputError {
         border-bottom: 1px solid #ff2323;
     }
@@ -1030,10 +1045,10 @@ button:focus {
 .form-field {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    border: none;
-    border-bottom: 1px solid #DDE3EE;
+    border: 1px solid #E2E9F4;
+    border-radius: 8px;
     height: var(--form-field-height);
-    padding: 0;
+    padding: 0 20px;
     width: 100%;
     z-index: 2;
     position: relative;
@@ -1041,33 +1056,45 @@ button:focus {
     color: #000;
     outline: none;
     font-size: 16px;
+    background-color: white;
     .anim();
 }
 
 .form-field.field--not-empty {
-    border-bottom: 1px solid#00BCE4;
+    border: 1px solid #ACB5C3
 }
 
 .form-field~.form-label {
-    // z-index: -1;
-    color: #8594AF;
+    z-index: 3;
+    color: ACB5C3;
     position: absolute;
     // font-size: 16px;
     font-size: 14px;
-    left: 0;
-    top: 12px;
+    left: 16px;
+    top: 21px;
     padding: 0;
     margin: 0;
     .anim();
 }
 
+.form-field {
+    &:focus {
+        border: 1px solid #ACB5C3;
+    }
+
+}
+
+::placeholder {
+    margin-left: 16px;
+}
+
 .form-field:focus~.form-label,
 .form-field.field--not-empty~.form-label,
 .form-grp.sTop .form-label {
-    top: -13px;
     font-size: 14px;
-    z-index: 2;
+    left: -150px;
     background: #fff;
+    transition: 0.4s;
 }
 
 .form-textarea-group .form-field {
@@ -1773,4 +1800,52 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .flex-justify {
     .flex();
+}
+
+.form-textarea-group {
+    .form-field {
+        padding: 20px;
+        overflow: hidden;
+        &::placeholder {
+            position: relative;
+            right: 0;
+            color: #ACB5C3;
+            font-weight: 500;
+            transition: 0.5s;
+            opacity: 1;
+
+        }
+
+        &:focus {
+            &::placeholder {
+                position: relative;
+                right: -100px;
+                opacity: 0;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.form-grp {
+    .form-field {
+        overflow: hidden;
+        &::placeholder {
+            position: relative;
+            right: 0;
+            color: #ACB5C3;
+            font-weight: 500;
+            opacity: 1;
+            transition: 0.5s;
+
+        }
+        &:focus {
+            &::placeholder {
+                position: relative;
+                right: -100px;
+                transition: 0.5s;
+                opacity: 0;
+            }
+        }
+    }
 }
