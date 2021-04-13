@@ -30,7 +30,7 @@ body {
 }
 
 .mainContainer {
-  padding: 120px 0 60px;
+  padding: 220px 0 60px;
 }
 
 .comm-section {
@@ -112,6 +112,7 @@ body {
 .comm_p {
   font-size: 18px;
   line-height: 1.5;
+  color: #545B65;
 }
 
 .blue_txt {
@@ -129,7 +130,9 @@ body {
 .darkblue_txt {
   color: var(--darkblue);
 }
-
+.font_normal {
+  font-weight: 400;
+}
 .font_medium {
   font-weight: 500;
 }
@@ -175,19 +178,7 @@ body {
   text-align: center;
 }
 
-@keyframes imganim {
-  0% {
-    top: 58%;
-  }
 
-  50% {
-    top: 60%;
-  }
-
-  100% {
-    top: 58%;
-  }
-}
 
 .d-none {
   display: none;
@@ -229,6 +220,10 @@ body {
       &:hover {
         color: var(--blue);
       }
+    }
+
+    .button {
+      padding: 0 32px;
     }
   }
 }
@@ -318,24 +313,139 @@ body {
   }
 
   button {
-    margin-top: 7.5rem;
+    margin-top: 115px;
   }
 }
 
-.img-animation {
+
+
+
+
+.anim-wrap-home {
   position: absolute;
-  top: 60%;
   right: 0;
-  transform: translateY(-50%);
-  animation: imganim 3s ease-in-out infinite 0s;
+  top: 20%;
   width: 55%;
   z-index: -1;
 
-  img {
-    width: 100%;
-    height: 100%;
+  .anim-wrap-home-inner {
+    position: relative;
+
+    .img-animation {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
+
+
+@keyframes boxanim1 {
+
+  0%,
+  100% {
+    top: 8%;
+    left: 17%;
+  }
+
+  50% {
+    top: 26%;
+    left: 34%;
+  }
+}
+
+@keyframes boxanim2 {
+
+  0%,
+  100% {
+    bottom: 15%;
+    right: 4%;
+  }
+
+  50% {
+    bottom: 30%;
+    right: 18%;
+  }
+}
+
+@keyframes cloud {
+
+  0%,
+  100% {
+    top: 18%;
+  }
+
+  50% {
+    top: 14%;
+  }
+}
+
+.micro-scope-animation {
+  position: relative;
+  width: 100%;
+
+  .scope {
+    position: absolute;
+    left: 33%;
+    top: -49px;
+  }
+
+  .home2 {
+    position: absolute;
+    animation: home2 5s ease infinite;
+  }
+}
+
+@keyframes home2 {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+
+  }
+}
+
+
+.cloud {
+  position: absolute;
+  top: 18%;
+  left: 37%;
+  animation: cloud 3s ease infinite;
+  width: 44%;
+  height: 44%;
+}
+
+.box-1 {
+  position: absolute;
+  animation: boxanim1 3s ease infinite;
+  width: 20%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.box-2 {
+  position: absolute;
+  animation: boxanim2 3s ease infinite;
+  width: 20%;
+
+  img {
+    width: 100%;
+  }
+
+}
+
+
+
+
 
 // Banner Section END
 
@@ -365,7 +475,7 @@ body {
 // About Section START
 .about_section {
   text-align: center;
-  padding: 64px 175px;
+  padding: 64px 120px;
   margin-top: 32px;
 
   h2 {
@@ -374,6 +484,8 @@ body {
 
   h5 {
     margin-bottom: 8px;
+    font-weight: 400;
+    color: #303957;
   }
 
   p {
@@ -636,13 +748,152 @@ body {
   }
 }
 
-.thank-you-wrap{
+.thank-you-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 24px;
-  img{
+
+  img {
     margin: 36px 0;
   }
+}
+
+#header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+.service_section {
+  p {
+    line-height: 1.6;
+  }
+}
+
+
+
+
+.who-we-are-anim {
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    object-fit: contain;
+  }
+
+  .main-back {
+    position: relative;
+    height: 100%;
+    width: 65%;
+  }
+
+  .cloud2 {
+    height: 30%;
+    width: 30%;
+    top: 13%;
+    left: 37%;
+    animation: cloud2 3s infinite;
+  }
+
+  .box2-1 {
+    height: 15%;
+    width: 15%;
+    top: 24%;
+    left: 25%;
+    animation: box21 3s infinite;
+
+  }
+
+  .box2-2 {
+    height: 15%;
+    width: 15%;
+    top: 76%;
+    left: 66%;
+    animation: box22 3s infinite;
+
+  }
+
+  .square1 {
+    height: 8%;
+    width: 8%;
+    top: 39%;
+    left: 35%;
+    // animation: square1 3s infinite;
+
+  }
+
+  .square2 {
+    height: 8%;
+    width: 8%;
+    top: 67%;
+    left: 59%;
+    animation: square2 3s infinite;
+
+  }
+}
+
+@keyframes cloud2 {
+
+  0%,
+  100% {
+    top: 13%;
+  }
+
+  50% {
+    top: 5%;
+  }
+}
+
+@keyframes box21 {
+
+  0%,
+  100% {
+    top: 24%;
+    left: 25%;
+  }
+
+  50% {
+    top: 39%;
+    left: 35%;
+
+  }
+}
+
+@keyframes box22 {
+
+  0%,
+  100% {
+    top: 76%;
+    left: 66%;
+  }
+
+  50% {
+
+    top: 67%;
+    left: 59%;
+  }
+}
+
+@keyframes square1 {
+
+  0%,
+  100% {
+    top: 67%;
+  }
+
+  50% {}
+}
+
+@keyframes square2 {
+
+  0%,
+  100% {
+    top: 67%;
+  }
+
+  50% {}
 }
