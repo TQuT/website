@@ -52,6 +52,21 @@
          $(this).removeClass('icon-seen').addClass('icon-hide');
      }
  });
+
+ $('.team-ct').on('click', function () {
+    $('.team-ct').removeClass('active');
+    $(this).addClass('active');
+});
+
+$(document).on('click', '.side-menu', function () {
+    $('.mobile-menu').toggleClass('in');
+    $('.menuOverlay').toggleClass('in');
+    // $('.side-menu').toggleClass("toggle-add");
+});
+
+$(document).on('click', '.menuBtn', function () {
+    $('.menuBtn').toggleClass("toggle-add");
+});
  /* // Password View */
 
 

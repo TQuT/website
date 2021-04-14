@@ -146,6 +146,10 @@
     .contact-padding {
         padding: 56px 100px;
     }
+    .header{
+        max-width: 960px;
+        padding: 0 40px;
+    }
 }
 
 @media all and (max-width:1024px) {
@@ -185,10 +189,6 @@
         font-size: 24px;
     }
 
-    // .img-animation {
-    //     transform: translateY(-120%);
-    // }
-
     .comm_p {
         font-size: 16px;
         line-height: 1.5;
@@ -203,10 +203,6 @@
 
         .w60 {
             width: 50%;
-
-            img {
-                width: 95%;
-            }
 
         }
 
@@ -260,6 +256,11 @@
     .form-textarea-group {
         margin-bottom: 16px;
     }
+
+    .header{
+        max-width: 800px;
+        padding: 0 40px;
+    }
 }
 
 @media all and (max-width:768px) {
@@ -292,11 +293,11 @@
         margin-right: auto;
     }
 
-    .anim-wrap-home{
+    .anim-wrap-home {
         position: relative;
         transform: translateY(0%);
-        width: 100%;
-        right: -50px;
+        width: 120%;
+        right: 40px;
     }
 
     .service_section {
@@ -380,6 +381,154 @@
         }
     }
 
+    .service_section {
+        .cloud3 {
+            left: -8%;
+        }
+
+        .ser {
+            height: 28%;
+            width: 28%;
+
+            &-1 {
+                left: -23%;
+                top: 20%;
+                height: 22%;
+                width: 22%;
+            }
+
+            &-2 {
+                left: 24%;
+                top: 16%;
+            }
+
+            &-3 {
+                left: -25%;
+                top: 67%;
+            }
+
+            &-4 {
+                left: 29%;
+                top: 69%;
+            }
+
+        }
+    }
+
+    .menu {
+        li {
+            display: none;
+        }
+
+        .menuBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side-menu {
+            position: relative;
+            z-index: 5000000;
+            display: block;
+            margin-left: 16px;
+        }
+    }
+
+    .who-we-are-anim .main-back {
+        width: 100%;
+    }
+
+    @keyframes square1 {
+
+        0%,
+        100% {
+            transform: scale(1.5);
+        }
+
+        25%,
+        75% {
+            transform: scale(1.5);
+        }
+
+        50% {
+            transform: scale(0.6);
+        }
+    }
+
+    @keyframes square2 {
+
+        0%,
+        100% {
+            transform: scale(1.5);
+            top: 70%;
+            left: 69%;
+        }
+
+        25%,
+        75% {
+            transform: scale(1.5);
+        }
+
+        50% {
+            transform: scale(0.6);
+        }
+    }
+
+    @keyframes cloud2 {
+
+        0%,
+        100% {
+            top: 13%;
+        }
+
+        25%,
+        75% {
+            top: 13%;
+        }
+
+        50% {
+            top: 5%;
+        }
+    }
+
+    @keyframes box21 {
+
+        0%,
+        100% {
+            top: 24%;
+            left: 25%;
+        }
+
+        25%,
+        75% {
+            top: 33%;
+            left: 32%;
+        }
+
+        50% {
+            top: 28%;
+        }
+    }
+
+    @keyframes box22 {
+
+        0%,
+        100% {
+            top: 74%;
+            left: 66%;
+        }
+
+        25%,
+        75% {
+            top: 65%;
+            left: 59%;
+        }
+
+        50% {
+            top: 62%;
+        }
+    }
+
 
 }
 
@@ -401,7 +550,7 @@
     }
 
     .service_section .w60 img {
-        padding: 0 36px 24px;
+        padding: 0 0px 24px;
     }
 
     .service_section h2 {
@@ -417,7 +566,7 @@
         margin-top: 40px;
     }
 
-    .anim-wrap-home{
+    .anim-wrap-home {
         transform: translateY(10%);
     }
 
@@ -471,6 +620,18 @@
     .blog-detail-wrap p {
         padding: 16px 0px;
     }
+
+    .footer .sitemap li a {
+        padding: 5px 16px;
+    }
+
+    .mobile-menu .header-rig li a {
+        font-size: 32px;
+    }
+
+    .anim-wrap-home {
+        width: 140%;
+    }
 }
 
 @media all and (max-width:480px) {
@@ -505,17 +666,14 @@
     .contact-padding {
         padding: 24px;
     }
+
+
 }
 
 @media all and (max-width:400px) {
     .comm-section {
         padding: 24px 28px;
     }
-
-    .anim-wrap-home{
-        transform: translateY(30%);
-    }
-
 }
 
 @media all and (max-width:359px) {
