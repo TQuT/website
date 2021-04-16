@@ -41,197 +41,205 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Header Starts -->
-    <header id="header">
-        <div class="header">
-            <a href="index.html" class="logo-ct">
-                <img src="./img/logo.png" alt="TQuT Logo">
-            </a>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="./services.html">Service</a>
-                    </li>
-                    <li>
-                        <a href="./blog-detail.html">About</a>
-                    </li>
-                    <li>
-                        <a href="./blogs.html">Blog</a>
-                    </li>
-                    <li class="menuBtn">
-                        <a href="contact.html" class="button line pur-line">Contact</a>
-                        <div class="menu2 side-menu">
-                            <span class="side-toggled-1 side-1"></span>
-                            <span class="side-toggled-2 side-2"></span>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+    <ul class="transition">
+        <li></li>
+    </ul>
 
-            <!-- Side Menu -->
-            <div class="menuOverlay"></div>
-            <div class="mobile-menu">
-                <ul class="header-rig">
-                    <li><a href="sevices " >Services</a></li>
-                    <li><a href="about ">About us</a></li>
-                    <li><a href="blog ">Blog</a></li>
-                </ul>
+    <div class="after-pt">
+        <!-- Header Starts -->
+        <header id="header">
+            <div class="header">
+                <a href="index.html" class="logo-ct">
+                    <img src="./img/logo.png" alt="TQuT Logo">
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="./services.html">Service</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./blogs.html">Blog</a>
+                        </li>
+                        <li class="menuBtn">
+                            <a href="contact.html" class="button line pur-line">Contact</a>
+                            <div class="menu2 side-menu">
+                                <span class="side-toggled-1 side-1"></span>
+                                <span class="side-toggled-2 side-2"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Side Menu -->
+                <div class="menuOverlay"></div>
+                <div class="mobile-menu">
+                    <ul class="header-rig">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Side Menu End -->
             </div>
-            <!-- Side Menu End -->
+        </header>
+        <!-- Header Ends -->
+
+        <!-- Main Container Starts -->
+        <div class="mainContainer">
+            <!-- Banner  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="page_banner" data-aos="fade-up">
+                    <h2 class="comm_h2 darkblue_txt mb16">Contact</h2>
+                    <h6 class="comm_h6 font_bold grey_txt ">
+                        Uses quantum computing and high performance computing in AWS cloud to study material properties.
+                    </h6>
+                </div>
+                <div class="f-row f-3 f-768-1">
+                    <div class="f-col">
+                        <div class="contact-wrap blue_bg_gradient" data-aos="fade-up">
+                            <div class="contact-image-wrap">
+                                <img src="./img/con-1.svg" alt="">
+                            </div>
+                            <address class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
+                                mollis.
+                                Nulla porta . </address>
+                        </div>
+                    </div>
+                    <div class="f-col">
+                        <div class="contact-wrap blue_bg_gradient" data-aos="fade-up">
+                            <div class="contact-image-wrap">
+                                <img src="./img/con-2.svg" alt="">
+                            </div>
+                            <a href="mailto:craig.gomez@mail.com">craig.gomez@mail.com</a>
+                            <a href="mailto:bianca.lucas@mail.com">bianca.lucas@mail.com</a>
+                        </div>
+                    </div>
+                    <div class="f-col">
+                        <div class="contact-wrap blue_bg_gradient" data-aos="fade-up">
+                            <div class="contact-image-wrap">
+                                <img src="./img/con-3.svg" alt="">
+                            </div>
+                            <a href="tel:(112)864-6995">(112)864-6995</a>
+                            <a href="tel:(720)619-7996">(720)619-7996</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- contact-tab END -->
+
+            <!-- contact-form START -->
+            <section class="container comm-section">
+                <div class="blue_bg_gradient contact-padding">
+                    <p class="comm_h6 text-center">Let’s Talk</p>
+                    <form id="commentForm" data-aos="fade-up">
+                        <div class="f-row f-2 f-768-1">
+                            <div class="w100">
+                                <div class="form-grp">
+                                    <input class="form-field" type="text" id="full-name" name="full-name"
+                                        placeholder="Your Name" required />
+                                </div>
+                            </div>
+                            <div class="f-col">
+                                <div class="form-grp">
+                                    <input class="form-field" type="email" id="email" name="email" placeholder="Email"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="f-col">
+                                <div class="form-grp">
+                                    <input class="form-field" type="number" id="number" name="number"
+                                        placeholder="Mobile" required />
+                                </div>
+
+                            </div>
+                            <div class="w100">
+                                <div class="form-textarea-group">
+                                    <textarea type="text" class="form-field" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="w100 text-center">
+                                <button class="button" type="submit">submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- contact-form END -->
+
         </div>
-    </header>
-    <!-- Header Ends -->
+        <!-- Main Container Ends -->
 
-    <!-- Main Container Starts -->
-    <div class="mainContainer">
-        <!-- Banner  START -->
-        <section class="container comm-section pt0 text-center">
-            <div class="page_banner">
-                <h2 class="comm_h2 darkblue_txt mb16">Contact</h2>
-                <h6 class="comm_h6 font_bold grey_txt ">
-                    Uses quantum computing and high performance computing in AWS cloud to study material properties.
-                </h6>
-            </div>
-        </section>
-        <!-- Banner  END -->
-
-        <!-- contact-tab START -->
-        <section class="container comm-section">
-            <div class="f-row f-3 f-640-1">
-                <div class="f-col">
-                    <div class="contact-wrap blue_bg_gradient">
-                        <div class="contact-image-wrap">
-                            <img src="./img/con-1.svg" alt="">
-                        </div>
-                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
-                            Nulla porta . </p>
-                    </div>
+        <footer id="footer">
+            <div class="footer">
+                <div class="foot-logo" data-aos="zoom-out">
+                    <img src="./img/logo.png" alt="">
                 </div>
-                <div class="f-col">
-                    <div class="contact-wrap blue_bg_gradient">
-                        <div class="contact-image-wrap">
-                            <img src="./img/con-2.svg" alt="">
-                        </div>
-                        <a href="mailto:craig.gomez@mail.com">craig.gomez@mail.com</a>
-                        <a href="mailto:bianca.lucas@mail.com">bianca.lucas@mail.com</a>
-                    </div>
+                <div class="social" data-aos="zoom-in">
+                    <a href="">
+                        <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="29.32" height="23.827"
+                            viewBox="0 0 29.32 23.827">
+                            <g id="Social_Twitter" data-name="Social/Twitter" transform="translate(0 0)">
+                                <path id="Shape"
+                                    d="M29.32,2.821a12.01,12.01,0,0,1-3.455.947A6.025,6.025,0,0,0,28.51.44,12.05,12.05,0,0,1,24.69,1.9,6.019,6.019,0,0,0,14.439,7.385,17.077,17.077,0,0,1,2.041,1.1,6.023,6.023,0,0,0,3.9,9.132a5.99,5.99,0,0,1-2.723-.753A6.02,6.02,0,0,0,6,14.353a6.029,6.029,0,0,1-2.717.1,6.02,6.02,0,0,0,5.62,4.177A12.1,12.1,0,0,1,0,21.125a17.029,17.029,0,0,0,9.221,2.7c11.168,0,17.478-9.432,17.1-17.892A12.247,12.247,0,0,0,29.32,2.821Z"
+                                    transform="translate(0 0)" fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29.32" height="29.32" viewBox="0 0 29.32 29.32">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M19.49,29.32V18.728h3.948l.591-4.584H19.49V11.218c0-1.327.369-2.231,2.271-2.231h2.427v-4.1A32.446,32.446,0,0,0,20.651,4.7c-3.5,0-5.9,2.136-5.9,6.059v3.38H10.8v4.584h3.958V29.32H2.932A2.932,2.932,0,0,1,0,26.388V2.932A2.932,2.932,0,0,1,2.932,0H26.388A2.932,2.932,0,0,1,29.32,2.932V26.388a2.932,2.932,0,0,1-2.932,2.932Z"
+                                    transform="translate(0 0)" fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35.184" height="27.932"
+                            viewBox="0 0 35.184 27.932">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M4.172,5.7a1.361,1.361,0,0,0-.444-1.149L.444.591V0h10.2l7.884,17.291L25.46,0h9.724V.591L32.375,3.284a.823.823,0,0,0-.312.789V23.861a.822.822,0,0,0,.312.787l2.743,2.693v.591H21.32v-.591l2.843-2.759c.279-.279.279-.361.279-.787V7.8l-7.9,20.067H15.474L6.274,7.8V21.25a1.856,1.856,0,0,0,.509,1.542l3.7,4.483v.592H0v-.592l3.7-4.483a1.787,1.787,0,0,0,.476-1.542V5.7Z"
+                                    fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
                 </div>
-                <div class="f-col">
-                    <div class="contact-wrap blue_bg_gradient">
-                        <div class="contact-image-wrap">
-                            <img src="./img/con-3.svg" alt="">
-                        </div>
-                        <a href="tel:(112)864-6995">(112)864-6995</a>
-                        <a href="tel:(720)619-7996">(720)619-7996</a>
-                    </div>
-                </div>
+                <ul class="sitemap" data-aos="zoom-in">
+                    <li>
+                        <a href="services.html">Service</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="blogs.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <h2 class="copyright">
+                    2021 © TQUT, ALL RIGHTS RESERVED
+                </h2>
             </div>
-        </section>
-        <!-- contact-tab END -->
-
-        <!-- contact-tab START -->
-        <section class="container comm-section">
-            <div class="blue_bg_gradient contact-padding">
-                <form id="commentForm">
-                    <div class="f-row f-2 f-768-1">
-                        <div class="w100">
-                            <div class="form-grp">
-                                <input class="form-field" type="text" id="full-name" name="full-name"
-                                    placeholder="Your Name" required />
-                            </div>
-                        </div>
-                        <div class="f-col">
-                            <div class="form-grp">
-                                <input class="form-field" type="email" id="email" name="email" placeholder="Email"
-                                    required />
-                            </div>
-                        </div>
-                        <div class="f-col">
-                            <div class="form-grp">
-                                <input class="form-field" type="number" id="number" name="number" placeholder="Mobile"
-                                    required />
-                            </div>
-
-                        </div>
-                        <div class="w100">
-                            <div class="form-textarea-group">
-                                <textarea type="text" class="form-field" placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="w100 text-center">
-                            <button class="button" type="submit">submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <!-- contact-tab END -->
-
+        </footer>
+        <!-- Footer Ends -->
     </div>
-    <!-- Main Container Ends -->
-
-    <footer id="footer">
-        <div class="footer">
-            <div class="foot-logo">
-                <img src="./img/logo.png" alt="">
-            </div>
-            <div class="social">
-                <a href="">
-                    <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="29.32" height="23.827"
-                        viewBox="0 0 29.32 23.827">
-                        <g id="Social_Twitter" data-name="Social/Twitter" transform="translate(0 0)">
-                            <path id="Shape"
-                                d="M29.32,2.821a12.01,12.01,0,0,1-3.455.947A6.025,6.025,0,0,0,28.51.44,12.05,12.05,0,0,1,24.69,1.9,6.019,6.019,0,0,0,14.439,7.385,17.077,17.077,0,0,1,2.041,1.1,6.023,6.023,0,0,0,3.9,9.132a5.99,5.99,0,0,1-2.723-.753A6.02,6.02,0,0,0,6,14.353a6.029,6.029,0,0,1-2.717.1,6.02,6.02,0,0,0,5.62,4.177A12.1,12.1,0,0,1,0,21.125a17.029,17.029,0,0,0,9.221,2.7c11.168,0,17.478-9.432,17.1-17.892A12.247,12.247,0,0,0,29.32,2.821Z"
-                                transform="translate(0 0)" fill="#646ecb" />
-                        </g>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="29.32" height="29.32" viewBox="0 0 29.32 29.32">
-                        <g transform="translate(0 0)">
-                            <path
-                                d="M19.49,29.32V18.728h3.948l.591-4.584H19.49V11.218c0-1.327.369-2.231,2.271-2.231h2.427v-4.1A32.446,32.446,0,0,0,20.651,4.7c-3.5,0-5.9,2.136-5.9,6.059v3.38H10.8v4.584h3.958V29.32H2.932A2.932,2.932,0,0,1,0,26.388V2.932A2.932,2.932,0,0,1,2.932,0H26.388A2.932,2.932,0,0,1,29.32,2.932V26.388a2.932,2.932,0,0,1-2.932,2.932Z"
-                                transform="translate(0 0)" fill="#646ecb" />
-                        </g>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35.184" height="27.932" viewBox="0 0 35.184 27.932">
-                        <g transform="translate(0 0)">
-                            <path
-                                d="M4.172,5.7a1.361,1.361,0,0,0-.444-1.149L.444.591V0h10.2l7.884,17.291L25.46,0h9.724V.591L32.375,3.284a.823.823,0,0,0-.312.789V23.861a.822.822,0,0,0,.312.787l2.743,2.693v.591H21.32v-.591l2.843-2.759c.279-.279.279-.361.279-.787V7.8l-7.9,20.067H15.474L6.274,7.8V21.25a1.856,1.856,0,0,0,.509,1.542l3.7,4.483v.592H0v-.592l3.7-4.483a1.787,1.787,0,0,0,.476-1.542V5.7Z"
-                                fill="#646ecb" />
-                        </g>
-                    </svg>
-                </a>
-            </div>
-            <ul class="sitemap">
-                <li>
-                    <a href="services.html">Service</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="blogs.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <h2 class="copyright">
-                2021 © TQUT, ALL RIGHTS RESERVED
-            </h2>
-        </div>
-    </footer>
-    <!-- Footer Ends -->
 
     <!-- Plugin -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 

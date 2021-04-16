@@ -48,214 +48,233 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <h1 class="comm_h1 blue_txt d-none">Quantum Ready Applications</h1>
-    <!-- Header Starts -->
-    <header id="header">
-        <div class="header">
-            <a href="index.html" class="logo-ct">
-                <img src="./img/logo.png" alt="TQuT Logo">
-            </a>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="./services.html">Service</a>
-                    </li>
-                    <li>
-                        <a href="./blog-detail.html">About</a>
-                    </li>
-                    <li>
-                        <a href="./blogs.html">Blog</a>
-                    </li>
-                    <li class="menuBtn">
-                        <a href="contact.html" class="button line pur-line">Contact</a>
-                        <div class="menu2 side-menu">
-                            <span class="side-toggled-1 side-1"></span>
-                            <span class="side-toggled-2 side-2"></span>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+    <ul class="transition">
+        <li></li>
+    </ul>
 
-            <!-- Side Menu -->
-            <div class="menuOverlay"></div>
-            <div class="mobile-menu">
-                <ul class="header-rig">
-                    <li><a href="sevices ">Services</a></li>
-                    <li><a href="about ">About us</a></li>
-                    <li><a href="blog ">Blog</a></li>
-                </ul>
-            </div>
-            <!-- Side Menu End -->
-        </div>
-    </header>
-    <!-- Header Ends -->
-
-    <!-- Main Container Starts -->
-    <main class="mainContainer">
-
-        <!-- Banner  START -->
-        <section class="container comm-section pt0 text-center">
-            <div class="page_banner">
-                <h2 class="comm_h2 darkblue_txt mb16">About</h2>
-                <h6 class="comm_h6 font_normal grey_txt ">
-                    Uses quantum computing and high performance computing in AWS cloud to study material properties.
-                </h6>
-            </div>
-        </section>
-        <!-- Banner  END -->
-
-
-        <!-- About  START -->
-        <section class="container comm-section">
-            <div class="service_section blue_bg_gradient mt32 text-center">
-                <h2 class="comm_h2 blue_txt">Who We Are?</h2>
-                <h5 class="comm_h5">
-                    Material Simulation platform development company for enterprise users using HPC and Quantum
-                    capabilities in cloud
-                </h5>
-                <p class="comm_p">
-                    Product will be a web based point and click interface which will hide complexities of
-                    computation from end users and let them work on material science projects.
-                </p>
-                <!-- <a href="javascript:void(0)" class="button">Know More</a> -->
-                <img src="./img/about.svg" alt="About Our Company" />
-            </div>
-        </section>
-        <!-- About  END -->
-
-
-        <!-- About Congue START -->
-        <section class="container comm-section about_grid">
-            <div class="f-row align-items-center pb80 about_congue">
-                <div class="w-768-100 w60">
-                    <div class="f-row f-2 align-items-center">
-                        <div class="f-col">
-                            <div>
-                                <img src="./img/about_1.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
+    <div class="after-pt">
+        <!-- Header Starts -->
+        <header id="header">
+            <div class="header">
+                <a href="index.html" class="logo-ct">
+                    <img src="./img/logo.png" alt="TQuT Logo">
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="./services.html">Service</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./blogs.html">Blog</a>
+                        </li>
+                        <li class="menuBtn">
+                            <a href="contact.html" class="button line pur-line">Contact</a>
+                            <div class="menu2 side-menu">
+                                <span class="side-toggled-1 side-1"></span>
+                                <span class="side-toggled-2 side-2"></span>
                             </div>
-                            <div>
-                                <img src="./img/about_3.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
-                            </div>
-                        </div>
-                        <div class="f-col">
-                            <img src="./img/about_2.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
-                        </div>
-                    </div>
-                    <!-- <img src="./img/Service_1.png" alt="Congue ex vel nisl viverra, 
-                        sit amet aliquet " /> -->
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Side Menu -->
+                <div class="menuOverlay"></div>
+                <div class="mobile-menu">
+                    <ul class="header-rig">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="w-768-100 w40">
-                    <h4 class="comm_h4 darkblue_txt">Congue ex vel nisl viverra,
-                        sit amet aliquet </h4>
-                    <p class="comm_p grey_txt font_medium">
-                        Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus
-                        id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc
-                        congue ex vel nisl viverra, sit amet aliquet
+                <!-- Side Menu End -->
+            </div>
+        </header>
+        <!-- Header Ends -->
+
+
+        <!-- Main Container Starts -->
+        <main class="mainContainer">
+
+            <!-- Banner  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="page_banner" data-aos="fade-up">
+                    <h2 class="comm_h2 darkblue_txt mb16">About</h2>
+                    <h6 class="comm_h6 font_normal grey_txt ">
+                        Uses quantum computing and high performance computing in AWS cloud to study material properties.
+                    </h6>
+                </div>
+            </section>
+            <!-- Banner  END -->
+
+
+            <!-- About  START -->
+            <section class="container comm-section">
+                <div class="service_section blue_bg_gradient mt32 text-center" data-aos="fade-up">
+                    <h2 class="comm_h2 blue_txt">Who We Are?</h2>
+                    <h5 class="comm_h5 font_normal darkblue_txt">
+                        Material Simulation platform development company for enterprise users using HPC and Quantum
+                        capabilities in cloud
+                    </h5>
+                    <p class="comm_p font_normal">
+                        Product will be a web based point and click interface which will hide complexities of
+                        computation from end users and let them work on material science projects.
                     </p>
-                </div>
-            </div>
-            <div class="f-row align-items-center pt80">
-                <div class="w-768-100 w40">
-                    <h4 class="comm_h4 darkblue_txt">Congue ex vel nisl viverra,
-                        sit amet aliquet </h4>
-                    <p class="comm_p grey_txt font_medium">
-                        Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus
-                        id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc
-                        congue ex vel nisl viverra, sit amet aliquet
-                    </p>
-                </div>
-                <div class="w-768-100 w60 text-right">
-                    <div class="f-row f-2">
-                        <div class="f-col align-self-start">
-                            <div>
-                                <img src="./img/about_1.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
-                            </div>
-                        </div>
-                        <div class="f-col align-self-end">
-                            <img src="./img/about_2.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
-                        </div>
+                    <div class="who-we-are-anim">
+                        <img src="./img/about.svg" class="main-back" alt="About Our Company" />
+                        <img src="./img/Group 3652.png" class="square1" alt="">
+                        <img src="./img/home-anim-box-2.png" class="box2-1" alt="">
+                        <img src="./img/cloud2.svg" class="cloud2" alt="">
+                        <img src="./img/small-square-anim.png" class="square2" alt="">
+                        <img src="./img/home-anim-box.png" class="box2-2" alt="">
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- About Congue END -->
+            </section>
+            <!-- About  END -->
 
 
-        <!-- Let's Talk START -->
-        <section class="container comm-section">
-            <div class="lets-talk-wrap">
-                <h6 class="comm_h6">Let’s talk</h6>
-                <h4 class="comm_h4">Congue ex vel nisl viverra,<br>
-                    sit amet aliquet </h4>
-                <a href="" class="button wht-line">Contact</a>
-            </div>
-        </section>
-        <!-- Let's Talk END -->
-    </main>
-    <!-- Main Container Ends -->
+            <!-- About Congue START -->
+            <section class="container comm-section about_grid">
+                <div class="f-row align-items-center pb80 about_congue">
+                    <div class="w-768-100 w60">
+                        <div class="f-row f-2 align-items-center">
+                            <div class="f-col">
+                                <div data-aos="fade-up">
+                                    <img src="./img/about_1.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
+                                </div>
+                                <div data-aos="fade-up">
+                                    <img src="./img/about_3.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
+                                </div>
+                            </div>
+                            <div class="f-col">
+                                <img src="./img/about_2.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-768-100 w40" data-aos="fade-up">
+                        <h4 class="comm_h4 darkblue_txt">Congue ex vel nisl viverra,
+                            sit amet aliquet </h4>
+                        <p class="comm_p grey_txt font_medium">
+                            Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus
+                            id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc
+                            congue ex vel nisl viverra, sit amet aliquet
+                        </p>
+                    </div>
+                </div>
+                <div class="f-row align-items-center pt80" data-aos="fade-up">
+                    <div class="w-768-100 w40">
+                        <h4 class="comm_h4 darkblue_txt">Congue ex vel nisl viverra,
+                            sit amet aliquet </h4>
+                        <p class="comm_p grey_txt font_medium">
+                            Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus
+                            id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc
+                            congue ex vel nisl viverra, sit amet aliquet
+                        </p>
+                    </div>
+                    <div class="w-768-100 w60 text-right" data-aos="fade-up">
+                        <div class="f-row f-2">
+                            <div class="f-col align-self-start">
+                                <div class="about-image-wrap">
+                                    <img src="./img/about_5.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
+                                </div>
+                            </div>
+                            <div class="f-col align-self-end">
+                                <div class="about-image-wrap second-wrap">
+                                    <img src="./img/about_4.png" alt="Congue ex vel nisl viverra, sit amet aliquet " />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Congue END -->
 
-    <footer id="footer">
-        <div class="footer">
-            <div class="foot-logo">
-                <img src="./img/logo.png" alt="">
+
+            <!-- Let's Talk START -->
+            <section class="container comm-section">
+                <div class="lets-talk-wrap" data-aos="fade-up">
+                    <h6 class="comm_h6">Let’s talk</h6>
+                    <h4 class="comm_h4">Congue ex vel nisl viverra,<br>
+                        sit amet aliquet </h4>
+                    <a href="" class="button wht-line">Contact</a>
+                </div>
+            </section>
+            <!-- Let's Talk END -->
+        </main>
+        <!-- Main Container Ends -->
+
+        <footer id="footer">
+            <div class="footer">
+                <div class="foot-logo" data-aos="zoom-out">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="social" data-aos="zoom-in">
+                    <a href="">
+                        <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="29.32" height="23.827"
+                            viewBox="0 0 29.32 23.827">
+                            <g id="Social_Twitter" data-name="Social/Twitter" transform="translate(0 0)">
+                                <path id="Shape"
+                                    d="M29.32,2.821a12.01,12.01,0,0,1-3.455.947A6.025,6.025,0,0,0,28.51.44,12.05,12.05,0,0,1,24.69,1.9,6.019,6.019,0,0,0,14.439,7.385,17.077,17.077,0,0,1,2.041,1.1,6.023,6.023,0,0,0,3.9,9.132a5.99,5.99,0,0,1-2.723-.753A6.02,6.02,0,0,0,6,14.353a6.029,6.029,0,0,1-2.717.1,6.02,6.02,0,0,0,5.62,4.177A12.1,12.1,0,0,1,0,21.125a17.029,17.029,0,0,0,9.221,2.7c11.168,0,17.478-9.432,17.1-17.892A12.247,12.247,0,0,0,29.32,2.821Z"
+                                    transform="translate(0 0)" fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29.32" height="29.32" viewBox="0 0 29.32 29.32">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M19.49,29.32V18.728h3.948l.591-4.584H19.49V11.218c0-1.327.369-2.231,2.271-2.231h2.427v-4.1A32.446,32.446,0,0,0,20.651,4.7c-3.5,0-5.9,2.136-5.9,6.059v3.38H10.8v4.584h3.958V29.32H2.932A2.932,2.932,0,0,1,0,26.388V2.932A2.932,2.932,0,0,1,2.932,0H26.388A2.932,2.932,0,0,1,29.32,2.932V26.388a2.932,2.932,0,0,1-2.932,2.932Z"
+                                    transform="translate(0 0)" fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35.184" height="27.932"
+                            viewBox="0 0 35.184 27.932">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M4.172,5.7a1.361,1.361,0,0,0-.444-1.149L.444.591V0h10.2l7.884,17.291L25.46,0h9.724V.591L32.375,3.284a.823.823,0,0,0-.312.789V23.861a.822.822,0,0,0,.312.787l2.743,2.693v.591H21.32v-.591l2.843-2.759c.279-.279.279-.361.279-.787V7.8l-7.9,20.067H15.474L6.274,7.8V21.25a1.856,1.856,0,0,0,.509,1.542l3.7,4.483v.592H0v-.592l3.7-4.483a1.787,1.787,0,0,0,.476-1.542V5.7Z"
+                                    fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="sitemap" data-aos="zoom-in">
+                    <li>
+                        <a href="services.html">Service</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="blogs.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <h2 class="copyright">
+                    2021 © TQUT, ALL RIGHTS RESERVED
+                </h2>
             </div>
-            <div class="social">
-                <a href="">
-                    <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="29.32" height="23.827"
-                        viewBox="0 0 29.32 23.827">
-                        <g id="Social_Twitter" data-name="Social/Twitter" transform="translate(0 0)">
-                            <path id="Shape"
-                                d="M29.32,2.821a12.01,12.01,0,0,1-3.455.947A6.025,6.025,0,0,0,28.51.44,12.05,12.05,0,0,1,24.69,1.9,6.019,6.019,0,0,0,14.439,7.385,17.077,17.077,0,0,1,2.041,1.1,6.023,6.023,0,0,0,3.9,9.132a5.99,5.99,0,0,1-2.723-.753A6.02,6.02,0,0,0,6,14.353a6.029,6.029,0,0,1-2.717.1,6.02,6.02,0,0,0,5.62,4.177A12.1,12.1,0,0,1,0,21.125a17.029,17.029,0,0,0,9.221,2.7c11.168,0,17.478-9.432,17.1-17.892A12.247,12.247,0,0,0,29.32,2.821Z"
-                                transform="translate(0 0)" fill="#646ecb" />
-                        </g>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="29.32" height="29.32" viewBox="0 0 29.32 29.32">
-                        <g transform="translate(0 0)">
-                            <path
-                                d="M19.49,29.32V18.728h3.948l.591-4.584H19.49V11.218c0-1.327.369-2.231,2.271-2.231h2.427v-4.1A32.446,32.446,0,0,0,20.651,4.7c-3.5,0-5.9,2.136-5.9,6.059v3.38H10.8v4.584h3.958V29.32H2.932A2.932,2.932,0,0,1,0,26.388V2.932A2.932,2.932,0,0,1,2.932,0H26.388A2.932,2.932,0,0,1,29.32,2.932V26.388a2.932,2.932,0,0,1-2.932,2.932Z"
-                                transform="translate(0 0)" fill="#646ecb" />
-                        </g>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35.184" height="27.932" viewBox="0 0 35.184 27.932">
-                        <g transform="translate(0 0)">
-                            <path
-                                d="M4.172,5.7a1.361,1.361,0,0,0-.444-1.149L.444.591V0h10.2l7.884,17.291L25.46,0h9.724V.591L32.375,3.284a.823.823,0,0,0-.312.789V23.861a.822.822,0,0,0,.312.787l2.743,2.693v.591H21.32v-.591l2.843-2.759c.279-.279.279-.361.279-.787V7.8l-7.9,20.067H15.474L6.274,7.8V21.25a1.856,1.856,0,0,0,.509,1.542l3.7,4.483v.592H0v-.592l3.7-4.483a1.787,1.787,0,0,0,.476-1.542V5.7Z"
-                                fill="#646ecb" />
-                        </g>
-                    </svg>
-                </a>
-            </div>
-            <ul class="sitemap">
-                <li>
-                    <a href="services.html">Service</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="blogs.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <h2 class="copyright">
-                2021 © TQUT, ALL RIGHTS RESERVED
-            </h2>
-        </div>
-    </footer>
-    <!-- Footer Ends -->
+        </footer>
+        <!-- Footer Ends -->
+    </div>
+
 
     <!-- Plugin -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 
