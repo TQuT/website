@@ -24,101 +24,65 @@ get_header();
 
 
     <!-- Main Container Starts -->
-	<div class="mainContainer">
-            <!-- Banner  START -->
-            <section class="container comm-section pt0 text-center">
-                <div class="page_banner" data-aos="fade-up">
-                    <h2 class="comm_h2 darkblue_txt mb16">Blog</h2>
-                </div>
-            </section>
-            <!-- Banner  END -->
+    <div class="mainContainer">
+        <!-- Banner  START -->
+        <section class="container comm-section pt0 text-center">
+            <div class="page_banner" data-aos="fade-up">
+                <h2 class="comm_h2 darkblue_txt mb16">Blog</h2>
+            </div>
+        </section>
+        <!-- Banner  END -->
 
-            <!-- Blog  START -->
-            <section class="container comm-section pt0 text-center">
-                <div class="blog-wrap">
-                    <div class="blog-image" data-aos="fade-up">
-                        <img src="./img/pexels-fauxels-3184418.png" alt="">
-                    </div>
-                    <div class="blog-text" data-aos="fade-up">
-                        <div class="calender">
-                            <img src="./img/calender.svg" alt="">
-                            <p class="comm_p">22/01/1966</p>
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $queryObject = new  Wp_Query(array(
+            'posts_per_page'   => '3',
+            'post_type'        => 'post',
+            'post_status'      => 'publish',
+            'paged' => $paged,
+        ));
+        if ($queryObject->have_posts()) :
+            $i = 0;
+            while ($queryObject->have_posts()) :
+                $queryObject->the_post(); ?>
+
+                <!-- Blog  START -->
+                <section class="container comm-section pt0 text-center">
+                    <div class="blog-wrap">
+                        <div class="blog-image" data-aos="fade-up">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail();
+                            } else {   ?>
+                               
+                            <?php  }
+                            ?>
                         </div>
-                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
-                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
-                            Nulla
-                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
-                        <a href="./blog-detail.html" class="button">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <!-- Blog  END -->
-
-            <!-- Blog  START -->
-            <section class="container comm-section pt0 text-center">
-                <div class="blog-wrap">
-                    <div class="blog-image" data-aos="fade-up">
-                        <img src="./img/pexels-fauxels-2.png" alt="">
-                    </div>
-                    <div class="blog-text" data-aos="fade-up">
-                        <div class="calender">
-                            <img src="./img/calender.svg" alt="">
-                            <p class="comm_p">22/01/1966</p>
+                        <div class="blog-text" data-aos="fade-up">
+                            <div class="calender">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/calender.svg" alt="">
+                                <?php the_time('d/m/Y') ?>
+                            </div>
+                            <div class="comm_h4"><?php the_title(); ?></div>
+                            <div class="comm_p">
+                                <?php the_excerpt();?>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" class="button">Read More</a>
                         </div>
-                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
-                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
-                            Nulla
-                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
-                        <a href="./blog-detail.html" class="button">Read More</a>
                     </div>
-                </div>
-            </section>
-            <!-- Blog  END -->
+                </section>
+                <!-- Blog  END -->
 
-            <!-- Blog  START -->
-            <section class="container comm-section pt0 text-center">
-                <div class="blog-wrap">
-                    <div class="blog-image" data-aos="fade-up">
-                        <img src="./img/pexels-fauxels-3.png" alt="">
-                    </div>
-                    <div class="blog-text" data-aos="fade-up">
-                        <div class="calender">
-                            <img src="./img/calender.svg" alt="">
-                            <p class="comm_p">22/01/1966</p>
-                        </div>
-                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
-                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
-                            Nulla
-                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
-                        <a href="./blog-detail.html" class="button">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <!-- Blog  END -->
-
-            <!-- Blog  START -->
-            <section class="container comm-section pt0 text-center">
-                <div class="blog-wrap">
-                    <div class="blog-image" data-aos="fade-up">
-                        <img src="./img/pexels-fauxels-4.png" alt="">
-                    </div>
-                    <div class="blog-text" data-aos="fade-up">
-                        <div class="calender">
-                            <img src="./img/calender.svg" alt="">
-                            <p class="comm_p">22/01/1966</p>
-                        </div>
-                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
-                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
-                            Nulla
-                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
-                        <a href="./blog-detail.html" class="button">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <!-- Blog  END -->
-
-        </div>
-        <!-- Main Container Ends -->
+            <?php endwhile; ?>
+            <div class="pagination-container text-center align-items-center">
+                <nav class="pagination">
+                    <?php pagination_bar($queryObject); ?>
+                </nav>
+            </div>
+        <?php wp_reset_postdata();
+        endif; ?>
+    </div>
+    <!-- Main Container Ends -->
 
 
 </main><!-- #main -->

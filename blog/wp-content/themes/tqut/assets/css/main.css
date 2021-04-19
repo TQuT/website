@@ -3273,12 +3273,15 @@ body {
   text-align: left;
 }
 .blog-text p {
-  margin: 24px 0 48px;
+  margin: 8px 0 28px;
+}
+.blog-text .comm_h4 {
+  color: #303957;
 }
 .blog-text .calender {
   display: flex;
   align-items: center;
-  margin: 36px 0 24px;
+  margin: 36px 0 16px;
 }
 .blog-text .calender P {
   margin: 0;
@@ -3304,6 +3307,7 @@ body {
   color: #545B65;
   text-align: left;
   padding: 24px 275px;
+  margin-bottom: 0;
 }
 .blog-detail-wrap .blog-wrap {
   border: none;
@@ -4205,6 +4209,27 @@ ul.transition li:first-of-type {
 .text-space p:nth-last-child(1) {
   margin-bottom: 0px;
 }
+.pagination .page-numbers {
+  padding: 8px 16px;
+  color: var(--blue);
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--blue);
+  margin: 0px 8px;
+}
+.pagination .page-numbers:hover {
+  background: var(--blue);
+  color: white;
+  opacity: 0.5;
+}
+.pagination .current {
+  background: var(--blue);
+  color: white;
+}
+.pagination .current:hover {
+  background: var(--darkblue);
+  opacity: 0.8;
+}
 @media all and (max-width: 1600px) {
   .mainContainer {
     padding: 200px 0 40px;
@@ -4805,4 +4830,3 @@ ul.transition li:first-of-type {
     font-size: 32px;
   }
 }
-/*# sourceMappingURL=main.css.map */

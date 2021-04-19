@@ -1,4 +1,6 @@
 <?php
+//update_option( 'siteurl', 'http://localhost/tqut/blog' );
+//update_option( 'home', 'http://localhost/tqut/blog' );
 /**
  * tqut functions and definitions
  *
@@ -140,7 +142,7 @@ add_action( 'widgets_init', 'tqut_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tqut_scripts() {
-	wp_enqueue_style( 'tqut-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// wp_enqueue_style( 'tqut-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'tqut-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'tqut-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -180,7 +182,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 function blank_scripts() {
-	wp_enqueue_style( 'blank-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// wp_enqueue_style( 'blank-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'blank-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'blank-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -205,42 +207,7 @@ function blank_scripts() {
 
 
 
-	if (is_archive() || is_page_template('blog.php') || is_search()) {
-		wp_enqueue_style('bootstrap-min-css', get_template_directory_uri() . '/assets/assets/css/bootstrap.min.css',false,'1.1','all' );
-		wp_enqueue_style('flickity-min-css', get_template_directory_uri() . '/assets/assets/css/flickity.min.css',false,'1.1','all' );
-		wp_enqueue_style('style-css', get_template_directory_uri() . '/assets/assets/css/style.css',false,'1.1','all' );
-		wp_enqueue_style('fontawesome-css', get_template_directory_uri() . '/assets/assets/css/fontawesome-all.min.css',false,'1.1','all' );
-		wp_enqueue_style('magnific-css', get_template_directory_uri() . '/assets/assets/css/magnific-popup.css',false,'1.1','all' );
-		wp_enqueue_style('googleapis-css', 'https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&amp;display=swap',false,'1.1','all' );
-
-		wp_enqueue_script( 'jquery-blog-js', get_template_directory_uri() . '/assets/assets/js/jquery.min.js', array (), 1.1, true);
-		wp_enqueue_script( 'lozad-blog-js', get_template_directory_uri() . '/assets/assets/js/lozad.min.js', array (), 1.1, true);
-		wp_enqueue_script( 'bootstrap-blog-js', get_template_directory_uri() . '/assets/assets/js/bootstrap.bundle.min.js', array (), 1.1, true);
-		wp_enqueue_script( 'aos-blog-js', get_template_directory_uri() . '/assets/assets/js/aos.js', array (), 1.1, true);
-		wp_enqueue_script( 'flickity-blog-js', get_template_directory_uri() . '/assets/assets/js/flickity.pkgd.min.js', array (), 1.1, true);
-		wp_enqueue_script( 'popup-blog-js', get_template_directory_uri() . '/assets/assets/js/jquery.magnific-popup.min.js', array (), 1.1, true);
-		wp_enqueue_script( 'countdown-blog-js', get_template_directory_uri() . '/assets/assets/js/jquery.countdown.js', array (), 1.1, true);
-		wp_enqueue_script( 'countTo-blog-js', get_template_directory_uri() . '/assets/assets/js/jquery.countTo.js', array (), 1.1, true);
-		wp_enqueue_script( 'global-blog-js', get_template_directory_uri() . '/assets/assets/js/global.js', array (), 1.1, true);
-		wp_enqueue_script( 'blog-js', get_template_directory_uri() . '/assets/js/blog.js', array (), 1.1, true);
 	
-	}
-	
-	if (is_single()) {
-		wp_enqueue_script( 'blog-detail-js', get_template_directory_uri() . '/assets/js/blog-details.js', array (), 1.1, true);
-		wp_enqueue_style( 'awesome-css',  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css', false, 1.1, 'all');
-
-
-		wp_enqueue_style('bootstrap-min-css', get_template_directory_uri() . '/assets/assets/css/bootstrap.min.css',false,'1.1','all' );
-		wp_enqueue_style('flickity-min-css', get_template_directory_uri() . '/assets/assets/css/flickity.min.css',false,'1.1','all' );
-		wp_enqueue_style('style-css', get_template_directory_uri() . '/assets/assets/css/style.css',false,'1.1','all' );
-		wp_enqueue_style('fontawesome-css', get_template_directory_uri() . '/assets/assets/css/fontawesome-all.min.css',false,'1.1','all' );
-		wp_enqueue_style('magnific-css', get_template_directory_uri() . '/assets/assets/css/magnific-popup.css',false,'1.1','all' );
-		wp_enqueue_style('magnific-css', 'https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&amp;display=swap',false,'1.1','all' );
-
-	}
-
-
 
 	// END ALL CSS and JS File
 
