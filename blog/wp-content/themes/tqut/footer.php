@@ -15,7 +15,7 @@
 <footer id="footer">
 	<div class="footer">
 		<div class="foot-logo" data-aos="zoom-out">
-			<a href="http://localhost/tqut/index.html">
+			<a href="http://leo9studio.in/projects/tqut/index.html">
 				<img src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="logo">
 			</a>
 		</div>
@@ -44,16 +44,16 @@
 		</div>
 		<ul class="sitemap" data-aos="zoom-in">
 			<li>
-				<a href="http://localhost/tqut/services.html">Service</a>
+				<a href="http://leo9studio.in/projects/tqut/services.html">Service</a>
 			</li>
 			<li>
-				<a href="http://localhost/tqut/blog/">About</a>
+				<a href="http://leo9studio.in/projects/tqut/blog/blogs">About</a>
 			</li>
 			<li>
 				<a href="">Blog</a>
 			</li>
 			<li>
-				<a href="http://localhost/tqut/contact.html">Contact</a>
+				<a href="http://leo9studio.in/projects/tqut/contact.html">Contact</a>
 			</li>
 		</ul>
 		<h2 class="copyright">

@@ -32,7 +32,7 @@ body {
 }
 
 .mainContainer {
-  padding: 220px 0 60px;
+  padding: 120px 0 60px;
 }
 
 .comm-section {
@@ -719,13 +719,22 @@ body {
 .blog-image {
   width: 100%;
   height: 330px;
+  overflow: hidden;
+  border-radius: 15px;
 
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    transition: 0.5s ease;
+  }
 
+  &:hover {
+    img {
+      transform: scale(1.03);
+      opacity: 0.8;
+      transition: 0.5s ease;
+    }
   }
 }
 
@@ -733,17 +742,32 @@ body {
   text-align: left;
 
   p {
-    margin: 8px 0 28px;
+    margin-top: 8px;
   }
 
   .comm_h4 {
     color: #303957;
+    margin-top: 16px;
+    .anim(0.3s);
+
+    &:hover {
+      opacity: 0.9;
+      .anim(0.3s)
+    }
   }
+
 
   .calender {
     display: flex;
     align-items: center;
-    margin: 36px 0 16px;
+    font-size: 16px;
+    color: #545B65;
+    font-weight: 500;
+
+    img {
+      height: 30px;
+      margin-right: 8px;
+    }
 
     P {
       margin: 0;
@@ -768,6 +792,11 @@ body {
   padding: 24px 0;
   border-top: 1px solid #EDEDED;
   border-bottom: 1px solid #EDEDED;
+  .comm_p{
+    font-size: 18px;
+    color: #303957;
+    font-weight: 900;
+  }
 
   img {
     padding: 16px;
@@ -792,6 +821,14 @@ body {
 .blog-detail-image {
   padding: 0 110px;
   margin-bottom: 24px;
+  height: 450px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
 .media-logos {
@@ -806,14 +843,14 @@ body {
 
     svg {
       path {
-        fill: #000000;
+        fill: var(--blue);
       }
     }
 
     &:hover {
       svg {
         path {
-          fill: var(--blue);
+          fill: var(--darkblue);
           transition: 0.5s;
         }
       }
@@ -1891,3 +1928,27 @@ ul.transition li {
   }
 }
 
+
+.read-more-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+.blog-detail-text {
+  figure {
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 850px;
+    margin: 16px auto;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.5s ease;
+    }
+  }
+}

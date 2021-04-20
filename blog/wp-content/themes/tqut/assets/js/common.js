@@ -23,6 +23,8 @@ $(window).on('load', function () {
     PageTransition();
     setTimeout(() => {
 
+        
+
         $('.after-pt').css('opacity', 1);
         $('.after-pt').css('transition', '1.5s');
 
@@ -186,18 +188,21 @@ $(window).on('load', function () {
                 });
             });
         }
-        if ($('.lazy').length > 0) {
-            $('.lazy').Lazy({
-                effect: 'fadeIn',
-                visibleOnly: true,
-            });
-        }
         window.scrollTo(0, 0);
         $('window').scrollTop(0);
 
+        jQuery(function ($) {
+            var path = window.location.href;
+            $('#header nav ul li a').each(function () {
+                if (this.href === path) {
+                    $(this).addClass('active');
+                }
+            });
+        });
 
 
-    }, 900);
+
+    }, 500);
 
 });
 

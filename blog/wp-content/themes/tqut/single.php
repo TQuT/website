@@ -36,7 +36,7 @@ get_header();
 			<!-- Blog-detail  START -->
 			<section class="container comm-section pt0 text-center">
 				<div class="blog-detail-wrap">
-					<div class="blog-image blog-detail-image" data-aos="fade-up">
+					<div class="blog-detail-image" data-aos="fade-up">
 						<?php the_post_thumbnail() ?>
 					</div>
 					<div class="blog-detail-text" data-aos="fade-up">
@@ -76,29 +76,34 @@ get_header();
 				<?php foreach ($other_blogs as $post) : ?>
 
 					<section class="container comm-section pt0 text-center">
-						<div class="blog-wrap">
-							<div class="blog-image" data-aos="fade-up">
-								<?php
-								if (has_post_thumbnail()) {
-									the_post_thumbnail();
-								} else {   ?>
-									<?php bloginfo('template_url'); ?>
-								<?php  }
-								?>
-							</div>
-							<div class="blog-text" data-aos="fade-up">
-								<div class="calender">
-									<img src="<?php bloginfo('template_url'); ?>/assets/img/calender.svg" alt="">
-									<?php the_time('d/m/Y') ?>
-								</div>
-								<div class="comm_h4"><?php the_title(); ?></div>
-								<div class="comm_p">
-									<?php the_excerpt(); ?>
-								</div>
-								<a href="<?php the_permalink(); ?>" class="button">Read More</a>
-							</div>
-						</div>
-					</section>
+                    <div class="blog-wrap" data-aos="fade-up">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="blog-image">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail();
+                                } else {   ?>
+
+                                <?php  }
+                                ?>
+                            </div>
+                        </a>
+                        <div class="blog-text">
+
+                            <a href="<?php the_permalink(); ?>"><div class="comm_h4"><?php the_title(); ?></div></a>
+                            <div class="comm_p">
+                                <?php the_excerpt(); ?>
+                            </div>
+                            <div class="read-more-wrap">
+                                <a href="<?php the_permalink(); ?>" class="button">Read More</a>
+                                <div class="calender">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/calender.svg" alt="">
+                                    <?php the_time('d/m/Y') ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 				<?php endforeach; ?>
 
 			<?php endif; ?>

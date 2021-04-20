@@ -48,26 +48,31 @@ get_header();
 
                 <!-- Blog  START -->
                 <section class="container comm-section pt0 text-center">
-                    <div class="blog-wrap">
-                        <div class="blog-image" data-aos="fade-up">
-                            <?php
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail();
-                            } else {   ?>
-                               
-                            <?php  }
-                            ?>
-                        </div>
-                        <div class="blog-text" data-aos="fade-up">
-                            <div class="calender">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/calender.svg" alt="">
-                                <?php the_time('d/m/Y') ?>
+                    <div class="blog-wrap" data-aos="fade-up">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="blog-image">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail();
+                                } else {   ?>
+
+                                <?php  }
+                                ?>
                             </div>
-                            <div class="comm_h4"><?php the_title(); ?></div>
+                        </a>
+                        <div class="blog-text">
+
+                            <a href="<?php the_permalink(); ?>"><div class="comm_h4"><?php the_title(); ?></div></a>
                             <div class="comm_p">
-                                <?php the_excerpt();?>
+                                <?php the_excerpt(); ?>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="button">Read More</a>
+                            <div class="read-more-wrap">
+                                <a href="<?php the_permalink(); ?>" class="button">Read More</a>
+                                <div class="calender">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/calender.svg" alt="">
+                                    <?php the_time('d/m/Y') ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -23,6 +23,9 @@ $(window).on('load', function () {
     PageTransition();
     setTimeout(() => {
 
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+
         $('.after-pt').css('opacity', 1);
         $('.after-pt').css('transition', '1.5s');
 
@@ -103,97 +106,106 @@ $(window).on('load', function () {
         /* // Password View */
 
 
-        if ($('#commentForm').length > 0) {
-            $.getScript("./js/jquery.validate.min.js", function () {
-                $.validator.addMethod("laxEmail", function (value, element) {
-                    return this.optional(element) || /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(value);
-                }, 'Please enter a valid email address.');
-                var ruleLists = {
-                    'name': {
-                        required: true,
-                        minlength: 2,
-                    },
-                    'mob_no': {
-                        required: true,
-                        /* minlength: 10, maxlength: 10, */
-                    },
-                    'email': {
-                        required: true,
-                        laxEmail: true
-                    },
-                };
-                var messageList = {
-                    'name': {
-                        required: "Your Name is required",
-                        minlength: "Name must be at least 2 characters",
-                    },
-                    'mob_no': {
-                        required: "Mobile Number is required",
-                        /* minlength: "Mobile Number must be at least 10 characters", maxlength: "Mobile Number must be 10 characters", */
-                    },
-                    'email': {
-                        required: "Email Address is required",
-                        laxEmail: "Please enter a valid email address.",
-                    },
-                };
+        // if ($('#commentForm').length > 0) {
+        //     $.getScript("./js/jquery.validate.min.js", function () {
+        //         $.validator.addMethod("laxEmail", function (value, element) {
+        //             return this.optional(element) || /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(value);
+        //         }, 'Please enter a valid email address.');
+        //         var ruleLists = {
+        //             'name': {
+        //                 required: true,
+        //                 minlength: 2,
+        //             },
+        //             'mob_no': {
+        //                 required: true,
+        //                 /* minlength: 10, maxlength: 10, */
+        //             },
+        //             'email': {
+        //                 required: true,
+        //                 laxEmail: true
+        //             },
+        //         };
+        //         var messageList = {
+        //             'name': {
+        //                 required: "Your Name is required",
+        //                 minlength: "Name must be at least 2 characters",
+        //             },
+        //             'mob_no': {
+        //                 required: "Mobile Number is required",
+        //                 /* minlength: "Mobile Number must be at least 10 characters", maxlength: "Mobile Number must be 10 characters", */
+        //             },
+        //             'email': {
+        //                 required: "Email Address is required",
+        //                 laxEmail: "Please enter a valid email address.",
+        //             },
+        //         };
 
-                function sendForm(t) {
-                    var name = $("#res-name").val();
-                    var email = $("#email").val();
-                    var mobile = $("#mobile").val();
-                    var whatsappin = $("#purchase_confirmation").val();
-                    $('.f-btn').html('Loading...');
-                    $.ajax({
-                        url: 'selldo_response.php',
-                        type: "POST",
-                        data: {
-                            'name': name,
-                            'email': email,
-                            'mobile': mobile,
-                            'whatsappin': whatsappin
-                        },
-                        success: function (result) {
-                            if (result == 'Success') {
-                                window.location.href = 'thankyou.html';
-                            } else {
-                                console.log('eEror');
-                            }
-                        },
-                        error: function (xhr, resp, text) {
-                            console.log(xhr, resp, text);
-                        }
-                    }); /* console.log($(t).serialize()); */
-                }
-                var validateObj = {
-                    rules: ruleLists,
-                    messages: messageList,
-                    submitHandler: function (form) {
-                        sendForm(form);
-                    }
-                };
-                $('.enquireComponent').load('content.php .enquireComponentIn', function () {
-                    $("#enquiryForm").attr("autocomplete", "off");
-                    $("#enquiryForm").validate(validateObj);
-                    $.getScript("./js/intlTelInput.js", function () {
-                        var input = document.querySelector("#mobile");
-                        var iti = window.intlTelInput(input, {
-                            separateDialCode: true,
-                            preferredCountries: ['in'],
-                            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
-                        });
-                        window.iti = iti;
-                    });
-                });
-            });
-        }
-        if ($('.lazy').length > 0) {
-            $('.lazy').Lazy({
-                effect: 'fadeIn',
-                visibleOnly: true,
-            });
-        }
+        //         function sendForm(t) {
+        //             var name = $("#res-name").val();
+        //             var email = $("#email").val();
+        //             var mobile = $("#mobile").val();
+        //             var whatsappin = $("#purchase_confirmation").val();
+        //             $('.f-btn').html('Loading...');
+        //             $.ajax({
+        //                 url: 'selldo_response.php',
+        //                 type: "POST",
+        //                 data: {
+        //                     'name': name,
+        //                     'email': email,
+        //                     'mobile': mobile,
+        //                     'whatsappin': whatsappin
+        //                 },
+        //                 success: function (result) {
+        //                     if (result == 'Success') {
+        //                         window.location.href = 'thankyou.html';
+        //                     } else {
+        //                         console.log('eEror');
+        //                     }
+        //                 },
+        //                 error: function (xhr, resp, text) {
+        //                     console.log(xhr, resp, text);
+        //                 }
+        //             }); /* console.log($(t).serialize()); */
+        //         }
+        //         var validateObj = {
+        //             rules: ruleLists,
+        //             messages: messageList,
+        //             submitHandler: function (form) {
+        //                 sendForm(form);
+        //             }
+        //         };
+        //         $('.enquireComponent').load('content.php .enquireComponentIn', function () {
+        //             $("#enquiryForm").attr("autocomplete", "off");
+        //             $("#enquiryForm").validate(validateObj);
+        //             $.getScript("./js/intlTelInput.js", function () {
+        //                 var input = document.querySelector("#mobile");
+        //                 var iti = window.intlTelInput(input, {
+        //                     separateDialCode: true,
+        //                     preferredCountries: ['in'],
+        //                     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+        //                 });
+        //                 window.iti = iti;
+        //             });
+        //         });
+        //     });
+        // }
+        // if ($('.lazy').length > 0) {
+        //     $('.lazy').Lazy({
+        //         effect: 'fadeIn',
+        //         visibleOnly: true,
+        //     });
+        // }
         window.scrollTo(0, 0);
         $('window').scrollTop(0);
+
+        jQuery(function ($) {
+            var path = window.location.href;
+            $('#header nav ul li a').each(function () {
+                if (this.href === path) {
+                    $(this).addClass('active');
+                }
+            });
+        });
 
 
 

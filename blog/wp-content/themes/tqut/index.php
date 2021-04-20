@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -71,9 +72,11 @@ get_header();
 			<!-- Blog  END -->
 
 		<?php endwhile; ?>
+		
 		<div class="pagination-container text-center align-items-center">
 			<nav class="pagination">
-				<?php pagination_bar($queryObject); ?>
+				<?php// pagination_bar($queryObject); ?>
+				<?php wp_link_pages(); ?>
 			</nav>
 		</div>
 	<?php wp_reset_postdata();
