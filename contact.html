@@ -1,68 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title></title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TQuT Contact</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-        <!-- Title -->
+    <!-- Title -->
 
-        <meta name="twitter:title" content="TQuT" />
-        <meta property="og:title" content="TQuT" />
+    <meta name="twitter:title" content="TQuT" />
+    <meta property="og:title" content="TQuT" />
 
-        <!-- Description -->
-        <meta name="description" content="TQuT" />
+    <!-- Description -->
+    <meta name="description" content="TQuT" />
 
-        <meta name="twitter:description" content="TQuT" />
-        <meta property="og:description" content="TQuT" />
+    <meta name="twitter:description" content="TQuT" />
+    <meta property="og:description" content="TQuT" />
 
-        <!-- keywords -->
-        <meta name="keywords" content="TQuT" />
+    <!-- keywords -->
+    <meta name="keywords" content="TQuT" />
 
-        <!-- Image or Logo -->
-        <meta name="image" content="TQuT" />
+    <!-- Image or Logo -->
+    <meta name="image" content="TQuT" />
 
-        <meta name="twitter:image:src" content="TQuT" />
-        <meta property="og:image" content="TQuT" />
+    <meta name="twitter:image:src" content="TQuT" />
+    <meta property="og:image" content="TQuT" />
 
-        <!-- URL -->
-        <link rel="canonical" href="TQuT" />
-        <meta property="og:url" content="TQuT" />
+    <!-- URL -->
+    <link rel="canonical" href="TQuT" />
+    <meta property="og:url" content="TQuT" />
 
-        <meta property="og:site_name" content="TQuT" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="TQuT" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
 
-    <body>
+<body>
+    <ul class="transition">
+        <li></li>
+    </ul>
+
+    <div class="after-pt">
         <!-- Header Starts -->
         <header id="header">
-
         </header>
         <!-- Header Ends -->
 
         <!-- Main Container Starts -->
         <div class="mainContainer">
+            <!-- Banner  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="page_banner" data-aos="fade-up">
+                    <h2 class="comm_h2 darkblue_txt mb16">Contact</h2>
+                    <h6 class="comm_h6 font_bold grey_txt ">
+                        Uses quantum computing and high performance computing in AWS cloud to study material properties.
+                    </h6>
+                </div>
+                <div class="f-row f-3 f-768-1">
+                    <div class="f-col">
+                        <div class="contact-wrap blue_bg_gradient" data-aos="fade-up">
+                            <div class="contact-image-wrap">
+                                <img src="./img/con-1.svg" alt="">
+                            </div>
+                            <address class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
+                                mollis.
+                                Nulla porta . </address>
+                        </div>
+                    </div>
+                    <div class="f-col">
+                        <div class="contact-wrap blue_bg_gradient" data-aos="fade-up">
+                            <div class="contact-image-wrap">
+                                <img src="./img/con-2.svg" alt="">
+                            </div>
+                            <a href="mailto:craig.gomez@mail.com">craig.gomez@mail.com</a>
+                            <a href="mailto:bianca.lucas@mail.com">bianca.lucas@mail.com</a>
+                        </div>
+                    </div>
+                    <div class="f-col">
+                        <div class="contact-wrap blue_bg_gradient" data-aos="fade-up">
+                            <div class="contact-image-wrap">
+                                <img src="./img/con-3.svg" alt="">
+                            </div>
+                            <a href="tel:(112)864-6995">(112)864-6995</a>
+                            <a href="tel:(720)619-7996">(720)619-7996</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- contact-tab END -->
+
+            <!-- contact-form START -->
+            <section class="container comm-section">
+                <div class="blue_bg_gradient contact-padding">
+                    <p class="comm_h6 text-center">Let’s Talk</p>
+                    <form id="commentForm" data-aos="fade-up">
+                        <div class="f-row f-2 f-768-1">
+                            <div class="w100">
+                                <div class="form-grp">
+                                    <input class="form-field" type="text" id="full-name" name="name"
+                                        placeholder="Your Name" required />
+                                </div>
+                            </div>
+                            <div class="f-col">
+                                <div class="form-grp">
+                                    <input class="form-field" type="email" id="email" name="email" placeholder="Email"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="f-col">
+                                <div class="form-grp">
+                                    <input class="form-field" type="number" id="number" name="number"
+                                        placeholder="Mobile" required />
+                                </div>
+
+                            </div>
+                            <div class="w100">
+                                <div class="form-textarea-group">
+                                    <textarea type="text" class="form-field" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="w100 text-center">
+                                <button class="button" type="submit">submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- contact-form END -->
 
         </div>
         <!-- Main Container Ends -->
 
-        <footer id="footer"></footer>
+        <!-- footer-starts -->
+        <footer id="footer">
+        </footer>
         <!-- Footer Ends -->
+    </div>
 
-        <!-- Plugin -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/common.js"></script>
-    </body>
+    <!-- Plugin -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script>
+        $(function () {
+            $("#commentForm").validate({
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                },
+                messages: {
+                    name: "Please enter your name",
+                    email: "Please enter a valid email address"
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
 
 </html>

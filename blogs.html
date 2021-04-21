@@ -1,68 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title></title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-        <!-- Title -->
+    <!-- Title -->
 
-        <meta name="twitter:title" content="TQuT" />
-        <meta property="og:title" content="TQuT" />
+    <meta name="twitter:title" content="TQuT" />
+    <meta property="og:title" content="TQuT" />
 
-        <!-- Description -->
-        <meta name="description" content="TQuT" />
+    <!-- Description -->
+    <meta name="description" content="TQuT" />
 
-        <meta name="twitter:description" content="TQuT" />
-        <meta property="og:description" content="TQuT" />
+    <meta name="twitter:description" content="TQuT" />
+    <meta property="og:description" content="TQuT" />
 
-        <!-- keywords -->
-        <meta name="keywords" content="TQuT" />
+    <!-- keywords -->
+    <meta name="keywords" content="TQuT" />
 
-        <!-- Image or Logo -->
-        <meta name="image" content="TQuT" />
+    <!-- Image or Logo -->
+    <meta name="image" content="TQuT" />
 
-        <meta name="twitter:image:src" content="TQuT" />
-        <meta property="og:image" content="TQuT" />
+    <meta name="twitter:image:src" content="TQuT" />
+    <meta property="og:image" content="TQuT" />
 
-        <!-- URL -->
-        <link rel="canonical" href="TQuT" />
-        <meta property="og:url" content="TQuT" />
+    <!-- URL -->
+    <link rel="canonical" href="TQuT" />
+    <meta property="og:url" content="TQuT" />
 
-        <meta property="og:site_name" content="TQuT" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="TQuT" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
 
-    <body>
+<body>
+    <ul class="transition">
+        <li></li>
+    </ul>
+
+    <div class="after-pt">
         <!-- Header Starts -->
         <header id="header">
+            <div class="header">
+                <a href="index.html" class="logo-ct">
+                    <img src="./img/logo.png" alt="TQuT Logo">
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="./services.html">Service</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost/tqut/blog/">Blog</a>
+                        </li>
+                        <li class="menuBtn">
+                            <a href="contact.html" class="button line pur-line">Contact</a>
+                            <div class="menu2 side-menu">
+                                <span class="side-toggled-1 side-1"></span>
+                                <span class="side-toggled-2 side-2"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
 
+                <!-- Side Menu -->
+                <div class="menuOverlay"></div>
+                <div class="mobile-menu">
+                    <ul class="header-rig">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Side Menu End -->
+            </div>
         </header>
         <!-- Header Ends -->
 
         <!-- Main Container Starts -->
         <div class="mainContainer">
+            <!-- Banner  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="page_banner" data-aos="fade-up">
+                    <h2 class="comm_h2 darkblue_txt mb16">Blog</h2>
+                </div>
+            </section>
+            <!-- Banner  END -->
+
+            <!-- Blog  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="blog-wrap">
+                    <div class="blog-image" data-aos="fade-up">
+                        <img src="./img/pexels-fauxels-3184418.png" alt="">
+                    </div>
+                    <div class="blog-text" data-aos="fade-up">
+                        <div class="calender">
+                            <img src="./img/calender.svg" alt="">
+                            <p class="comm_p">22/01/1966</p>
+                        </div>
+                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
+                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
+                            Nulla
+                            porta risus id neque tempor, in efficitur justo imperdiet. 
+                        </p>
+                        <a href="./blog-detail.html" class="button">Read More</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog  END -->
+
+            <!-- Blog  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="blog-wrap">
+                    <div class="blog-image" data-aos="fade-up">
+                        <img src="./img/pexels-fauxels-2.png" alt="">
+                    </div>
+                    <div class="blog-text" data-aos="fade-up">
+                        <div class="calender">
+                            <img src="./img/calender.svg" alt="">
+                            <p class="comm_p">22/01/1966</p>
+                        </div>
+                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
+                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
+                            Nulla
+                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
+                        <a href="./blog-detail.html" class="button">Read More</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog  END -->
+
+            <!-- Blog  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="blog-wrap">
+                    <div class="blog-image" data-aos="fade-up">
+                        <img src="./img/pexels-fauxels-3.png" alt="">
+                    </div>
+                    <div class="blog-text" data-aos="fade-up">
+                        <div class="calender">
+                            <img src="./img/calender.svg" alt="">
+                            <p class="comm_p">22/01/1966</p>
+                        </div>
+                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
+                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
+                            Nulla
+                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
+                        <a href="./blog-detail.html" class="button">Read More</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog  END -->
+
+            <!-- Blog  START -->
+            <section class="container comm-section pt0 text-center">
+                <div class="blog-wrap">
+                    <div class="blog-image" data-aos="fade-up">
+                        <img src="./img/pexels-fauxels-4.png" alt="">
+                    </div>
+                    <div class="blog-text" data-aos="fade-up">
+                        <div class="calender">
+                            <img src="./img/calender.svg" alt="">
+                            <p class="comm_p">22/01/1966</p>
+                        </div>
+                        <div class="comm_h4">Congue ex vel nisl viverra, sit amet aliquet </div>
+                        <p class="comm_p">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis.
+                            Nulla
+                            porta risus id neque tempor, in efficitur justo imperdiet. </p>
+                        <a href="./blog-detail.html" class="button">Read More</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog  END -->
 
         </div>
         <!-- Main Container Ends -->
 
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="footer">
+                <div class="foot-logo" data-aos="zoom-out">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="social" data-aos="zoom-in">
+                    <a href="">
+                        <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="29.32" height="23.827"
+                            viewBox="0 0 29.32 23.827">
+                            <g id="Social_Twitter" data-name="Social/Twitter" transform="translate(0 0)">
+                                <path id="Shape"
+                                    d="M29.32,2.821a12.01,12.01,0,0,1-3.455.947A6.025,6.025,0,0,0,28.51.44,12.05,12.05,0,0,1,24.69,1.9,6.019,6.019,0,0,0,14.439,7.385,17.077,17.077,0,0,1,2.041,1.1,6.023,6.023,0,0,0,3.9,9.132a5.99,5.99,0,0,1-2.723-.753A6.02,6.02,0,0,0,6,14.353a6.029,6.029,0,0,1-2.717.1,6.02,6.02,0,0,0,5.62,4.177A12.1,12.1,0,0,1,0,21.125a17.029,17.029,0,0,0,9.221,2.7c11.168,0,17.478-9.432,17.1-17.892A12.247,12.247,0,0,0,29.32,2.821Z"
+                                    transform="translate(0 0)" fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29.32" height="29.32" viewBox="0 0 29.32 29.32">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M19.49,29.32V18.728h3.948l.591-4.584H19.49V11.218c0-1.327.369-2.231,2.271-2.231h2.427v-4.1A32.446,32.446,0,0,0,20.651,4.7c-3.5,0-5.9,2.136-5.9,6.059v3.38H10.8v4.584h3.958V29.32H2.932A2.932,2.932,0,0,1,0,26.388V2.932A2.932,2.932,0,0,1,2.932,0H26.388A2.932,2.932,0,0,1,29.32,2.932V26.388a2.932,2.932,0,0,1-2.932,2.932Z"
+                                    transform="translate(0 0)" fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35.184" height="27.932"
+                            viewBox="0 0 35.184 27.932">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M4.172,5.7a1.361,1.361,0,0,0-.444-1.149L.444.591V0h10.2l7.884,17.291L25.46,0h9.724V.591L32.375,3.284a.823.823,0,0,0-.312.789V23.861a.822.822,0,0,0,.312.787l2.743,2.693v.591H21.32v-.591l2.843-2.759c.279-.279.279-.361.279-.787V7.8l-7.9,20.067H15.474L6.274,7.8V21.25a1.856,1.856,0,0,0,.509,1.542l3.7,4.483v.592H0v-.592l3.7-4.483a1.787,1.787,0,0,0,.476-1.542V5.7Z"
+                                    fill="#646ecb" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="sitemap" data-aos="zoom-in">
+                    <li>
+                        <a href="services.html">Service</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost/tqut/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <h2 class="copyright">
+                    2021 © TQUT, ALL RIGHTS RESERVED
+                </h2>
+            </div>
+        </footer>
         <!-- Footer Ends -->
+    </div>
 
-        <!-- Plugin -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/common.js"></script>
-    </body>
+
+    <!-- Plugin -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
 
 </html>
